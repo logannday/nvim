@@ -1,6 +1,3 @@
-vim.opt.cursorline=true
-vim.opt.cursorlineopt="number"
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.timeoutlen=1000
@@ -56,3 +53,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- space y to yank to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+--source vimrc
+vim.keymap.set("n", "<leader>s", ":luafile $MYVIMRC<CR>")

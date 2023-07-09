@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
    'prettier/vim-prettier',
+   'junegunn/goyo.vim',
    'tpope/vim-surround',
    'lervag/vimtex',
    'lewis6991/gitsigns.nvim',
@@ -41,6 +42,7 @@ local plugins = {
   },
   'mfussenegger/nvim-jdtls',
   'jose-elias-alvarez/null-ls.nvim',
+  -- c 
   -- completion
    'hrsh7th/nvim-cmp',
    'hrsh7th/cmp-nvim-lsp',
@@ -50,8 +52,10 @@ local plugins = {
    --Navigation
    'christoomey/vim-tmux-navigator',
    'ThePrimeagen/harpoon',
+   'ThePrimeagen/vim-be-good',
    --colorscheme
    "rebelot/kanagawa.nvim",
+   { "ellisonleao/gruvbox.nvim", priority = 1000 },
    "xiyaowong/nvim-transparent",
    --gc to comment visual regions
     { 'numToStr/Comment.nvim', opts = {} },

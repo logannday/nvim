@@ -27,17 +27,13 @@ require("lspconfig").lua_ls.setup {
     }
   }
 }
-require("lspconfig").cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
 require("lspconfig").texlab.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
 require("lspconfig").jdtls.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
+  -- capabilities = capabilities,
 }
 require("lspconfig").clangd.setup {
   on_attach = on_attach,
