@@ -21,6 +21,13 @@ return {
             "folke/neodev.nvim",
             "mfussenegger/nvim-jdtls",
         },
+        opts = {
+            inlay_hints = {
+                enabled = true,
+                -- prefix = "  ",
+                -- highlight = "Comment",
+            },
+        },
         event = { "BufReadPost", "BufWritePost", "BufNewFile" },
         config = function()
             -- Global mappings.
@@ -60,7 +67,7 @@ return {
                     vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, {})
                     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-                    vim.keymap.set('n', '<C-;>', vim.lsp.buf.hover, opts)
+                    vim.keymap.set('n', '<K>', vim.lsp.buf.hover, opts)
                     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
                     vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, opts)
                     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
@@ -80,6 +87,7 @@ return {
 
             -- Manual configs
             require'lspconfig'.jdtls.setup{}
+            require'lspconfig'.hls.setup{}
 
             local servers = {
                 lua_ls = {

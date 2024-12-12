@@ -1,11 +1,11 @@
 -- Define a function to open man pages in a vertical split
-function VerticalManPage()
-    local word = vim.fn.expand("<cword>")
-    vim.cmd("vert Man " .. word)
-end
+-- function VerticalManPage()
+--     local word = vim.fn.expand("<cword>")
+--     vim.cmd("vert Man " .. word)
+-- end
 
 -- Map the function to the 'K' key
-vim.api.nvim_set_keymap('n', 'K', '<cmd>lua VerticalManPage()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'K', '<cmd>lua VerticalManPage()<CR>', { noremap = true, silent = true })
 
 -- quicker commenting of lines
 vim.keymap.set("n", "<leader>c", "Vgcc")
