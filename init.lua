@@ -1,9 +1,3 @@
---    / /   ____  ____ | |  / (_)___ ___
---   / /   / __ \/ __ `/ | / / / __ `__ \
---  / /___/ /_/ / /_/ /| |/ / / / / / / /
--- /_____/\____/\__, / |___/_/_/ /_/ /_/
---             /____/
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -17,9 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.lsp.enable('pyright')
+
 require("options")
 require("globals")
 require("autocmds")
 require("keymaps")
+require("lsp_config")
 
 require("lazy").setup("plugins")

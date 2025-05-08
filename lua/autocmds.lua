@@ -8,6 +8,16 @@ vim.api.nvim_create_autocmd("BufNewFile", {
     end,
 })
 
+-- Open nvim in telescope
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     local args = vim.fn.argv()
+--     if #args == 0 then
+--       require("telescope.builtin").find_files()
+--     end
+--   end
+-- })
+
 -- set Compiler for rust to cargo on enter
 vim.api.nvim_exec(
     [[

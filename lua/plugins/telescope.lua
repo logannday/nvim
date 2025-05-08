@@ -10,6 +10,8 @@ return {
 				file_ignore_patterns = {
 					"venv",
 					"node_modules",
+                    "__pycache__/",
+                    "%.pyc",
 				},
 				layout_strategy = "horizontal",
 				layout_config = {
