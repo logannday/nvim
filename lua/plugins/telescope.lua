@@ -52,7 +52,7 @@ return {
 			require("telescope.builtin").find_files({
 				prompt_title = "~ dotfiles ~",
 				shorten_path = false,
-				cwd = "~/dotfiles",
+				cwd = "~/.config/nvim",
 				width = 0.25,
 
 				layout_strategy = "horizontal",
