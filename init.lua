@@ -11,12 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.lsp.enable('pyright')
+-- vim.lsp.enable('pyright')
 
 require("options")
-require("globals")
 require("autocmds")
 require("keymaps")
-require("lsp_config")
 
 require("lazy").setup("plugins")
