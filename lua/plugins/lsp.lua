@@ -12,6 +12,7 @@ return {
             vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
             vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
             vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+            vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 
 
             -- On attach keymaps
@@ -26,7 +27,6 @@ return {
                     vim.keymap.set('n', '<space>wl', function()
                         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                     end, opts)
-                    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
                     vim.keymap.set('n', '<space>f', function()
                         vim.lsp.buf.format { async = true }
                     end, opts)
