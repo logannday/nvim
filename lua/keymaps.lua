@@ -38,3 +38,19 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Exit terminal ergonomically
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
+
+-- add vertical jumps to the jump list
+vim.api.nvim_set_keymap(
+  'n',
+  'j',
+  [[v:count > 1 ? "m'" .. v:count .. "j" : 'j']],
+  { expr = true, noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+  'n',
+  'k',
+  [[v:count > 1 ? "m'" .. v:count .. "k" : 'k']],
+  { expr = true, noremap = true }
+)
+

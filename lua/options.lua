@@ -3,6 +3,7 @@ vim.g.maplocalleader = ","
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 5
 -- vim.opt[guicursor] = ""
+vim.o.winborder = 'rounded'
 
 -- treesitter folding
 vim.opt.foldenable = false

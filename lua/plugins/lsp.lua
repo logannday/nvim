@@ -22,6 +22,7 @@ return {
                     local opts = { buffer = ev.buf }
                     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+                    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
                     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
                     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
                     vim.keymap.set('n', '<space>wl', function()
@@ -31,6 +32,12 @@ return {
                         vim.lsp.buf.format { async = true }
                     end, opts)
                 end,
+            })
+
+            vim.diagnostic.config({
+                float = {
+                    border = "rounded",
+                },
             })
         end,
         dependencies = {
