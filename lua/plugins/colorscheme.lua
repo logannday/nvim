@@ -1,6 +1,19 @@
+vim.cmd("colorscheme retrobox")
 return {
     {
-        enabled = true,
+    },
+    {
+        enabled = false,
+        'fenetikm/falcon',
+        config = function ()
+            vim.o.background = "dark"
+            vim.cmd("let g:falcon_background = 0")
+            vim.cmd("let g:falcon_inactive = 1")
+            vim.cmd("colorscheme falcon")
+        end
+    },
+    {
+        enabled = false,
         'ellisonleao/gruvbox.nvim',
         priority = 1000,
         config = function()
@@ -10,22 +23,22 @@ return {
             })
             local hour = tonumber(os.date("%H"))
 
-            if hour >= 7 and hour < 19 then
+            if hour >= 7 and hour < 20.5 then
                 -- Daytime: use light background
                 vim.o.background = "light"
             else
                 -- Nighttime: use dark background
                 vim.o.background = "dark"
             end
-            -- vim.cmd([[set background=light]])
-            -- vim.cmd([[set background=dark]])
-            vim.cmd.colorscheme('gruvbox')
+            vim.o.background = "dark"
+            -- vim.cmd = "dark"
+            -- vim.cmd.colorscheme('gruvbox')
         end
     },
     {
         "catppuccin/nvim",
         name = "catppuccin",
-        enabled = true,
+        enabled = false,
         priority = 1000,
         config = function()
             require("catppuccin").setup({
@@ -83,6 +96,7 @@ return {
     },
     {
         "rebelot/kanagawa.nvim",
+        enabled = false,
         config = function()
             -- Default options:
             require('kanagawa').setup({

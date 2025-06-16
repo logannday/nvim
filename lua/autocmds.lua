@@ -51,13 +51,13 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
--- -- Automatically open Netrw when Neovim is launched without a filename
--- vim.cmd([[
---   autocmd VimEnter * if argc() == 0 | Explore | endif
--- ]])
--- vim.cmd([[
---     augroup ProjectDrawer
---     autocmd!
---     autocmd VimEnter * if argc() == 0 | Explore! | endif
---     augroup END
--- ]])
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.hl.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})
