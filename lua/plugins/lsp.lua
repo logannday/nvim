@@ -34,28 +34,23 @@ return {
                 end,
             })
 
-            vim.diagnostic.config({
-                float = {
-                    border = "rounded",
-                },
-            })
         end,
         dependencies = {
             {
                 "mason-org/mason.nvim",
                 opts = {}
             },
-            {
-                "mason-org/mason-lspconfig.nvim",
-                opts = {
-                    ensure_installed = {
-                        "pyright",
-                        "lua_ls",
-                        "rust_analyzer"
-                    },
-                },
-
-            },
+            -- {
+            --     "mason-org/mason-lspconfig.nvim",
+            --     opts = {
+            --         ensure_installed = {
+            --             "pyright",
+            --             "lua_ls",
+            --             "rust_analyzer"
+            --         },
+            --     },
+            --
+            -- },
             {
                 "folke/neodev.nvim",
                 opts = {},
