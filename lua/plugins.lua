@@ -2,10 +2,7 @@ vim.pack.add({
 	"https://github.com/echasnovski/mini.nvim.git",
 	"https//github.com/neovim/nvim-lspconfig.git",
 	"https://github.com/vague2k/vague.nvim.git",
-	"https://github.com/chomosuke/typst-preview.nvim.git",
-	"https://github.com/andrewferrier/wrapping.nvim.git",
 })
-require('wrapping').setup({})
 
 -- Colorscheme
 require('vague').setup({ transparent = true })
@@ -35,5 +32,3 @@ vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls', 'tinymist' })
 
 vim.keymap.set("n", "<leader>gf", ":lua vim.lsp.buf.format()<CR>")
 vim.keymap.set("n", "<leader>d", ":lua vim.diagnostic.open_float()<CR>")
-
-require('typst-preview').setup({})
