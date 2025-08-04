@@ -1,6 +1,6 @@
 -- Set 2 space indent for web dev
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html", "javascript" },
+    pattern = { "html", "javascript", "react",  },
     callback = function()
         vim.opt_local.shiftwidth = 2
         vim.opt_local.tabstop = 2

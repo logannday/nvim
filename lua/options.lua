@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = "yes"
@@ -15,12 +15,10 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 
 --line number stuff
-vim.wo.relativenumber = true
 vim.wo.number = true
+vim.wo.relativenumber = true
 
-vim.opt.cursorline = false
-vim.opt.cursorlineopt = "number"
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
+vim.o.winborder = "rounded"
