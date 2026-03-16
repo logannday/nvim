@@ -20,6 +20,7 @@ vim.pack.add({
 	"https://github.com/stevearc/oil.nvim.git",
 	"https://github.com/ibhagwan/fzf-lua.git",
 	"https://github.com/catppuccin/nvim.git",
+	"https://github.com/ellisonleao/gruvbox.nvim.git",
 })
 
 
